@@ -24,8 +24,8 @@ public class Connect {
         try {
             //Nos conectamos a la base de Access usando la librería UCanAccess
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-            String ruta = "Ruta de base de datos";
-            String dbURL = "jdbc:ucanaccess:" + ruta;
+            String ruta = "Ruta de base de datos";//En caso de que el programa corra en Linux, debemos agregar otra barra más(/)
+            String dbURL = "jdbc:ucanaccess://" + ruta;
             
             //conn será la conección a la base de Access
             Connection conn = DriverManager.getConnection(dbURL);
